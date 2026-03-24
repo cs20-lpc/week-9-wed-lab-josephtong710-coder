@@ -61,7 +61,7 @@ template <typename T>
 void ArrayQueue<T>::dequeue() {
     // TODO
     if (isEmpty()) {
-        throw std::runtime_error("Queue is empty");
+        throw string("Queue is empty");
     }
     frontIndex = (frontIndex + 1) % maxSize;
     this->length--;
@@ -71,7 +71,7 @@ template <typename T>
 void ArrayQueue<T>::enqueue(const T& elem) {
     // TODO
     if (isFull()) {
-        throw std::runtime_error("Queue is full");
+        throw string("Queue is full");
     }
     backIndex = (backIndex + 1) % maxSize;
     buffer[backIndex] = elem;
@@ -82,7 +82,7 @@ template <typename T>
 T ArrayQueue<T>::front() const {
     // TODO
     if (isEmpty()) {
-        throw std::runtime_error("Queue is empty");
+        throw string("Queue is empty");
     }
     return buffer[frontIndex];
 }
