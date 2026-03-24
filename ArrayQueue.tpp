@@ -4,6 +4,8 @@ ArrayQueue<T>::ArrayQueue(int i) {
     maxSize = i;
     this->length = 0;
     this->buffer = new T[maxSize];
+    frontIndex = 0;
+    backIndex = -1;
 }
 
 template <typename T>
