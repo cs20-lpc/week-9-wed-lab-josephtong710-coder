@@ -29,7 +29,7 @@ template <typename T>
 T ArrayQueue<T>::back() const {
     // TODO
     if (isEmpty()) {
-        throw std::runtime_error("Queue is empty");
+        throw string("Queue is empty");
     }
     return buffer[backIndex];
 }
